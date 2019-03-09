@@ -1,0 +1,60 @@
+
+//Sum the digits in an integer
+/**
+ * 
+ */
+package sumDigits;
+
+/*
+Write a method that computes the sum of the digits in an integer. Use the following method header:
+public static int sumDigits(long n)
+For example, sumDigits(234) returns 9 (= 2 + 3 + 4). (Hint: Use the % operator to extract digits and the / operator to remove the extracted digit. For instance, to extract 4 from 234, use 234 % 10 (= 4 ). To remove 4 from 234, use 234 / 10 (= 2 3 ). Use a loop to repeatedly extract and remove the digit until all the digits are extracted. Write a test program that prompts the user to enter an integer then displays the sum of all its digits.
+So in your main method you'd call sumDigits() like this and print what it returns.
+For example:
+System.out.println("Sum of the digits in the number 1234 is: " + sumDigits(1234));
+
+Note: In object-oriented programming, method is a jargon used for function.
+Methods are bound to a class and they define the behavior of a class.
+The standard library methods are built-in methods in Java that are
+readily available for use. These standard libraries come along with
+the Java Class Library (JCL) in a Java archive (*.jar)
+file with JVM and JRE.
+
+modifier static returnType nameOfMethod (Parameter List) {
+	// method body
+}	
+ */
+import java.util.Scanner;
+public class sumDigits_class {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Write a method that computes the sum of the digits\nin an integer.Use the following method header:\r\n" + 
+				"\r" + 
+				"public static int sumDigits(long n)");
+		
+		System.out.println("###########################################################################");
+		
+		
+	      Scanner in = new Scanner(System.in);
+	      System.out.print("Input an integer: ");
+	      int digits = in.nextInt();
+		  System.out.println("The sum is "+sumDigits(digits));		
+		
+	}
+	 public static int sumDigits(long n) {
+			int result = 0;
+			
+			while(n > 0) {
+				result += n % 10;
+				n /= 10;
+			}
+			
+			return result;
+		}
+
+}
