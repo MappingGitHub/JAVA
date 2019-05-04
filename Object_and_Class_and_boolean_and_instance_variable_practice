@@ -1,0 +1,39 @@
+package Object_and_Class_and_boolean_and_instance_variable_practice;
+
+class stomach{
+	
+	//Note:variables and methods defined within a class are called members of the class
+	
+	// instance variable
+	//The class has one instance variable (variable defined inside class) isHungry
+	boolean isHungry;  
+	 
+	// AfterLunch() is our method 1
+	void AfterLunch(){
+		isHungry=false;
+	}
+	
+	// BeforeLunch() is our method 2
+	void BeforeLunch(){
+		isHungry=true;
+	}
+}
+
+//Note:When class is defined, only the specification for the object 
+//is defined; no memory or storage is allocated.
+//To access members defined within the class, you need to create objects.
+public class HumanBeing {
+
+	public static void main(String[] args) {
+		
+		stomach obj1=new stomach(); // create obj1 object of HumanBeing class
+		stomach obj2=new stomach(); // create obj2 object of HumanBeing class
+		
+		obj1.AfterLunch();
+		obj1.BeforeLunch();
+		
+		System.out.println("I can eat a sandwich at my break time  is  "+obj1.isHungry);
+		System.out.println("I can eat a sandwich during my working time is "+obj2.isHungry);
+	}
+
+}
