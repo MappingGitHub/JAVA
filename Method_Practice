@@ -1,0 +1,21 @@
+package Method_Practice;
+
+public class Method_Practice {
+
+	public static void main(String[] args) {
+		System.out.println("Everyone knows well that  15*16 is "+result(16,16)+"\n");
+		System.out.println("15*16="+result(16,16)+"\n");
+		print();
+	}
+	public static void print() {
+		
+		System.out.println("Good Job");
+	}
+	
+	public static int result(int a,int b) {
+		 
+			int c;
+			c=a*b;
+			return c;		
+	}
+}
